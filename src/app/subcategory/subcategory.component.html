@@ -1,0 +1,46 @@
+<p>subcategory works!</p>
+
+<div class="container">
+    <h1>SubCategory Management</h1>
+  
+    <form (submit)="addsubcategory()">
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <select [(ngModel)]="cname" id="name"  [ngModelOptions]="{standalone: true}" required>
+          <option *ngFor="let category of categories" [value]="category['cname']">{{ category['cname'] }}</option>
+        </select>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="subcname" name="name" required>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Add Vendor</button>
+    </form>
+
+    <hr>
+
+    <table class="table" *ngIf="subcategories">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subcategory of subcategories">
+          <td>{{ subcategory['subcategoryId'] }}</td> 
+          <td>{{ subcategory['subcname']}}</td>
+          <!-- <td>{{subcategory.subcategory.name}}</td>
+          <td>{{subcategory.category.name}}</td>
+          <td>{{subcategory.user.name}}</td> -->
+        
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
