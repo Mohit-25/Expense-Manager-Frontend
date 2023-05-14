@@ -82,7 +82,7 @@ export class SubcategoryComponent {
       console.log(error.error.msg);
       console.log(localStorage.getItem("catid"))
       
-     })
+     })   
 
     
   }

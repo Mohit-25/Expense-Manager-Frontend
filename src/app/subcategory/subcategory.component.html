@@ -1,4 +1,4 @@
-<p>subcategory works!</p>
+<!-- <p>subcategory works!</p > -->
 
 <div class="container">
     <h1>SubCategory Management</h1>
@@ -18,7 +18,7 @@
         <input type="text" class="form-control" id="name" [(ngModel)]="subcname" name="name" required>
       </div>
       
-      <button type="submit" class="btn btn-primary">Add Vendor</button>
+      <button type="submit" class="btn btn-primary">Add Subcategory</button>
     </form>
 
     <hr>
@@ -26,14 +26,14 @@
     <table class="table" *ngIf="subcategories">
       <thead>
         <tr>
-          <th>ID</th>
+          <!-- <th>ID</th> -->
           <th>Name</th>
           <!-- <th>Action</th> -->
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let subcategory of subcategories">
-          <td>{{ subcategory['subcategoryId'] }}</td> 
+          <!-- <td>{{ subcategory['subcategoryId'] }}</td>  -->
           <td>{{ subcategory['subcname']}}</td>
           <!-- <td>{{subcategory.subcategory.name}}</td>
           <td>{{subcategory.category.name}}</td>

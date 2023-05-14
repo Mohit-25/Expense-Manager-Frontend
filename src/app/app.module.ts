@@ -16,6 +16,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { VendorComponent } from './vendor/vendor.component';
 import { CategoryComponent } from './category/category.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { SubcategoryComponent } from './subcategory/subcategory.component';
     UserDashboardComponent,
     VendorComponent,
     CategoryComponent,
-    SubcategoryComponent
+    SubcategoryComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

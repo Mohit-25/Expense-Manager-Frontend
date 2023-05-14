@@ -8,6 +8,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { VendorComponent } from './vendor/vendor.component';
 import { CategoryComponent } from './category/category.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { LoginGuard } from './login.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {
@@ -23,16 +25,24 @@ const routes: Routes = [
     component:ChangePasswordComponent,path:"change"
   },
   {
-    component:UserDashboardComponent,path:"user"
+    component:UserDashboardComponent, path:"user",canActivate:[LoginGuard]
   },
   {
-    component:VendorComponent,path:"vendor"
+    component:VendorComponent,path:"vendor",canActivate:[LoginGuard]
   },
   {
-    component:CategoryComponent,path:"category"
+    component:CategoryComponent,path:"category",canActivate:[LoginGuard]
   },
   {
-    component:SubcategoryComponent,path:"subcategory"
+    component:SubcategoryComponent,path:"subcategory",canActivate:[LoginGuard]
+  },
+  {
+    component:LogoutComponent,path:"logout",children:[
+      {
+        component:LoginComponent,
+        path:"/aaa"
+      }
+    ]
   }
 ];
 
